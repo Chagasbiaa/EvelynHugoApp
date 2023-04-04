@@ -1,1 +1,83 @@
 # EvelynHugoApp
+
+Documentação da API Google Books
+
+URL da documentação: https://developers.google.com/books/docs/v1/getting_started
+
+URL de acesso a API: https://www.googleapis.com/books/v1/
+
+Métodos e dados de autenticação: Para acessar a API do Google Books, é necessário obter uma chave de API válida. A chave pode ser obtida no Console de APIs do Google. Dependendo do método utilizado, pode ser necessária a autenticação OAuth 2.0.
+
+Métodos disponíveis (endpoints):
+
+Volumes (/volumes): Este endpoint permite buscar volumes na biblioteca do Google Books, por meio de um termo de pesquisa (q) ou de filtros específicos (filter). É possível definir o tipo de impressão (printType), o nível de detalhamento (projection), o índice do primeiro resultado a ser retornado (startIndex) e o número máximo de resultados a serem retornados (maxResults). Os dados retornados incluem informações sobre os volumes encontrados, como título, autor, editora, descrição, imagem da capa, entre outros.
+
+Meus Livros (/mylibrary/bookshelves): Este endpoint permite gerenciar prateleiras de livros personalizadas do usuário. É possível criar, atualizar ou excluir prateleiras, bem como adicionar ou remover volumes de uma prateleira específica. Para realizar essas operações, é necessário passar a identificação da prateleira (shelf) e, em alguns casos, a identificação do volume (volumeId).
+
+Minhas Transações (/myconfig/subscription/events): Este endpoint permite receber notificações sobre eventos relacionados à conta do usuário, como alterações em prateleiras de livros, atualizações de comentários ou análises de usuários, entre outros. As notificações são enviadas em formato de fluxo (stream), utilizando o protocolo Server-Sent Events (SSE).
+
+Análises de usuários (/reviews): Este endpoint permite buscar comentários e análises de usuários sobre um volume específico. Para isso, é necessário passar a identificação do volume (volumeId) e, opcionalmente, a versão do conteúdo (contentVersion). Os dados retornados incluem informações sobre as análises, como identificação, avaliação, texto, fonte e data de atualização.
+
+Livros Gratuitos (/volumes/free): Este endpoint permite buscar volumes gratuitos na biblioteca do Google Books. É possível definir o tipo de impressão (printType), o nível de detalhamento (projection), o índice do primeiro resultado a ser retornado (startIndex) e o número máximo de resultados a serem retornados (maxResults). Os dados retornados incluem informações sobre os volumes encontrados, como título, autor, editora, descrição, imagem da capa, entre outros.
+
+Atributos/parâmetros solicitados por cada método:
+
+Volumes:
+
+q: Termo de pesquisa
+printType: Tipo de impressão
+projection: Nível de detalhamento
+filter: Filtros
+startIndex: Índice do primeiro resultado a ser retornado
+maxResults: Número máximo de resultados a serem retornados
+Meus Livros:
+
+shelf: Identificação da prateleira
+volumeId: Identificação do volume
+Minhas Transações:
+
+none
+Análises de usuários:
+
+volumeId: Identificação do volume
+contentVersion: Versão do conteúdo
+Livros Gratuitos:
+
+printType: Tipo de impressão
+projection: Nível de detalhamento
+filter: Filtros
+startIndex: Índice do primeiro resultado a ser retornado
+maxResults: Número máximo de resultados a serem retornados
+Nome, identificação, tipo e descrição dos dados retornados para cada método:
+
+Volumes:
+
+kind: Tipo de recurso (books#volumes)
+items: Lista de volumes retornados
+Meus Livros:
+
+kind: Tipo de recurso (books#bookshelf)
+id: Identificação da prateleira
+selfLink: URL da prateleira
+title: Título da prateleira
+volumeCount: Número de volumes na prateleira
+volumes: Lista de volumes na prateleira
+Minhas Transações:
+
+kind: Tipo de recurso (books#notification)
+items: Lista de notificações
+Análises de usuários:
+
+kind: Tipo de recurso (books#review)
+id: Identificação da análise
+volumeId: Identificação do volume
+volumeTitle: Título do volume
+rating: Avaliação (1 a 5)
+fullTextUrl: URL do texto completo da análise
+snippet: Trecho da análise
+source: Fonte da análise
+updated: Data da última atualização
+Livros Gratuitos:
+
+kind: Tipo de recurso (books#volumes)
+items: Lista de volumes gratuitos
