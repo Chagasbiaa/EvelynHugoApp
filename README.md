@@ -135,7 +135,7 @@ Livros Gratuitos:
 	    	"full": inclui todos os dados de volume
 		"lite": inclui um subconjunto de campos em volumeInfor e acessInfo
 
-	showPreorders (boolean): Se definido como "true", é possível ver os livros disponíveis para pré-venda. (Por padrão é "false")
+	-showPreorders (boolean): Se definido como "true", é possível ver os livros disponíveis para pré-venda. (Por padrão é "false")
 
 	-source (string): String para identificar o criador da solicitação
 	
