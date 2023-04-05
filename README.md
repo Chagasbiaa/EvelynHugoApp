@@ -18,80 +18,80 @@ Métodos disponíveis (endpoints):
 
     -Análises de usuários (/reviews): Este endpoint permite buscar comentários e análises de usuários sobre um volume específico. Para isso, é necessário passar a identificação do volume (volumeId) e, opcionalmente, a versão do conteúdo (contentVersion). Os dados retornados incluem informações sobre as análises, como identificação, avaliação, texto, fonte e data de atualização.
 
-Livros Gratuitos (/volumes/free): Este endpoint permite buscar volumes gratuitos na biblioteca do Google Books. É possível definir o tipo de impressão (printType), o nível de detalhamento (projection), o índice do primeiro resultado a ser retornado (startIndex) e o número máximo de resultados a serem retornados (maxResults). Os dados retornados incluem informações sobre os volumes encontrados, como título, autor, editora, descrição, imagem da capa, entre outros.
+    -Livros Gratuitos (/volumes/free): Este endpoint permite buscar volumes gratuitos na biblioteca do Google Books. É possível definir o tipo de impressão (printType), o nível de detalhamento (projection), o índice do primeiro resultado a ser retornado (startIndex) e o número máximo de resultados a serem retornados (maxResults). Os dados retornados incluem informações sobre os volumes encontrados, como título, autor, editora, descrição, imagem da capa, entre outros.
+
 
 Atributos/parâmetros solicitados por cada método:
 
 Volumes:
 
-q: Termo de pesquisa
-printType: Tipo de impressão
-projection: Nível de detalhamento
-filter: Filtros
-startIndex: Índice do primeiro resultado a ser retornado
-maxResults: Número máximo de resultados a serem retornados
+-q: Termo de pesquisa
+-printType: Tipo de impressão
+-projection: Nível de detalhamento
+-filter: Filtros
+-startIndex: Índice do primeiro resultado a ser retornado
+-maxResults: Número máximo de resultados a serem retornados
+
 Meus Livros:
+-shelf: Identificação da prateleira
+-volumeId: Identificação do volume
 
-shelf: Identificação da prateleira
-volumeId: Identificação do volume
 Minhas Transações:
+-none
 
-none
 Análises de usuários:
+-volumeId: Identificação do volume
+-contentVersion: Versão do conteúdo
 
-volumeId: Identificação do volume
-contentVersion: Versão do conteúdo
 Livros Gratuitos:
-
-printType: Tipo de impressão
-projection: Nível de detalhamento
-filter: Filtros
-startIndex: Índice do primeiro resultado a ser retornado
-maxResults: Número máximo de resultados a serem retornados
-Nome, identificação, tipo e descrição dos dados retornados para cada método:
+-printType: Tipo de impressão
+-projection: Nível de detalhamento
+-filter: Filtros
+-startIndex: Índice do primeiro resultado a ser retornado
+-maxResults: Número máximo de resultados a serem retornados
+-Nome, identificação, tipo e descrição dos dados retornados para cada método:
 
 Volumes:
+-kind: Tipo de recurso (books#volumes)
+-items: Lista de volumes retornados
 
-kind: Tipo de recurso (books#volumes)
-items: Lista de volumes retornados
 Meus Livros:
+-ind: Tipo de recurso (books#bookshelf)
+-d: Identificação da prateleira
+-elfLink: URL da prateleira
+-itle: Título da prateleira
+-volumeCount: Número de volumes na prateleira
+-volumes: Lista de volumes na prateleira
 
-kind: Tipo de recurso (books#bookshelf)
-id: Identificação da prateleira
-selfLink: URL da prateleira
-title: Título da prateleira
-volumeCount: Número de volumes na prateleira
-volumes: Lista de volumes na prateleira
 Minhas Transações:
+-kind: Tipo de recurso (books#notification)
+-items: Lista de notificações
 
-kind: Tipo de recurso (books#notification)
-items: Lista de notificações
 Análises de usuários:
+-kind: Tipo de recurso (books#review)
+-id: Identificação da análise
+-volumeId: Identificação do volume
+-volumeTitle: Título do volume
+-rating: Avaliação (1 a 5)
+-fullTextUrl: URL do texto completo da análise
+-snippet: Trecho da análise
+-source: Fonte da análise
+-updated: Data da última atualização
 
-kind: Tipo de recurso (books#review)
-id: Identificação da análise
-volumeId: Identificação do volume
-volumeTitle: Título do volume
-rating: Avaliação (1 a 5)
-fullTextUrl: URL do texto completo da análise
-snippet: Trecho da análise
-source: Fonte da análise
-updated: Data da última atualização
 Livros Gratuitos:
-
-kind: Tipo de recurso (books#volumes)
-items: Lista de volumes gratuitos
+-kind: Tipo de recurso (books#volumes)
+-items: Lista de volumes gratuitos
 
 
 
     VOLUME: LIST - https://www.googleapis.com/books/v1/volumes?q={parâmetros}
       
-      PARÊMETRO OBRIGATÓRIO:
+      *PARÊMETRO OBRIGATÓRIO:
         
         -q (string): Consulta de pesquisa de texto completa;
         
         
-      PARÂMETROS OPCIONAIS:
+      *PARÂMETROS OPCIONAIS:
         
         -download (string): Restringe os volumes de acordo com a disponibilidade de download
            valor do tipo:
@@ -125,25 +125,18 @@ items: Lista de volumes gratuitos
         -partner (string): Restringe e gera resultados de marca para o ID do parceiro
         
         -printType (string): Restringe a apenas livros ou revistas
-             valores:
-                  ""
+            valores:
+                  "all": todos os tipos de conteúdo do volume
+		  "books": somente livros
+		  "magazines": somente revistas
+		  
+	-projection (string): Restringe as informações retornadas a um conjunto de campos selecionados
+	    valores:
+	    	"full": inclui todos os dados de volume
+		"lite": inclui um subconjunto de campos em volumeInfor e acessInfo
 
-  
-  -libraryRestrict:	(string)	Restringir a pesquisa à biblioteca do usuário:
-        "my-library": restringe à biblioteca do usuário, qualquer estante.
-	      "no-restrict": não restringir com base na biblioteca do usuário.
-        
-  -orderBy: (string) Ordena os resultados da pesquisa:
-        "newest": publicado mais recentemente.
-        "relevance": relevância dos termos de pesquisa.
-        
-  -filter: (string) Filtra os resultados da pesquisa:
-       "full": o público pode ver o texto do volume inteiro.
-       "partial": o público vê partes do texto.
+	showPreorders (boolean): Se definido como "true", é possível ver os livros disponíveis para pré-venda. (Por padrão é "false")
 
-
-
-
-
-https://developers.google.com/books/docs/v1/reference/volumes/list?hl=pt-br
-
+	-source (string): String para identificar o criador da solicitação
+	
+	-startIndex (insugned integer): Índice do primeiro resultado a ser retomado (inicia em 0)
