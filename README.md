@@ -143,7 +143,7 @@ Livros Gratuitos:
 	
 	
 	
-	Volume: Get - GET https://www.googleapis.com/books/v1/volumes/volumeId
+	VOLUME: - GET https://www.googleapis.com/books/v1/volumes/volumeId
 
 	Parâmetros obrigatórios:
 	•	volumeId (string): Id do volume a ser recuperado; 
