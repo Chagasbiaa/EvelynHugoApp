@@ -141,20 +141,22 @@ Livros Gratuitos:
 	
         -startIndex (insugned integer): Índice do primeiro resultado a ser retomado (inicia em 0)
 	
+	
+	
 	Volume: Get - GET https://www.googleapis.com/books/v1/volumes/volumeId
 
-Parâmetros obrigatórios:
-•	volumeId (string): Id do volume a ser recuperado; 
+	Parâmetros obrigatórios:
+	•	volumeId (string): Id do volume a ser recuperado; 
 
-Parâmetros opcionais:
-•	partner (string): Resultados de marca para o Id do parceiro;
+	Parâmetros opcionais:
+	•	partner (string): Resultados de marca para o Id do parceiro;
 
-•	projection (string): Restrinja as informações retornadas a um conjunto de campos selecionados;
-Os valores aceitáveis são:
-                        "full": inclui todos os dados de volume.
-                        "lite": inclui um subconjunto de campos em volumeInfo e accessInfo.
+	•	projection (string): Restrinja as informações retornadas a um conjunto de campos selecionados;
+	Os valores aceitáveis são:
+				"full": inclui todos os dados de volume.
+				"lite": inclui um subconjunto de campos em volumeInfo e accessInfo.
 
-•	Source (string) String para identficar o criador da solicitação. 
- 
-Resposta: Se for bem-sucedido, este método retornará um recurso Volume no corpo da resposta.
+	•	Source (string) String para identficar o criador da solicitação. 
+
+	Resposta: Se for bem-sucedido, este método retornará um recurso Volume no corpo da resposta.
 
