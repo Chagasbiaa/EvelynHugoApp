@@ -130,13 +130,13 @@ Livros Gratuitos:
 		  "books": somente livros
 		  "magazines": somente revistas
 		  
-	-projection (string): Restringe as informações retornadas a um conjunto de campos selecionados
+        -projection (string): Restringe as informações retornadas a um conjunto de campos selecionados
 	    valores:
 	    	"full": inclui todos os dados de volume
 		"lite": inclui um subconjunto de campos em volumeInfor e acessInfo
 
-	-showPreorders (boolean): Se definido como "true", é possível ver os livros disponíveis para pré-venda. (Por padrão é "false")
+        -showPreorders (boolean): Se definido como "true", é possível ver os livros disponíveis para pré-venda. (Por padrão é "false")
 
-	-source (string): String para identificar o criador da solicitação
+        -source (string): String para identificar o criador da solicitação
 	
-	-startIndex (insugned integer): Índice do primeiro resultado a ser retomado (inicia em 0)
+        -startIndex (insugned integer): Índice do primeiro resultado a ser retomado (inicia em 0)
