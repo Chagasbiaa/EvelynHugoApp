@@ -10,13 +10,13 @@ Métodos e dados de autenticação: Para acessar a API do Google Books, é neces
 
 Métodos disponíveis (endpoints):
 
-Volumes (/volumes): Este endpoint permite buscar volumes na biblioteca do Google Books, por meio de um termo de pesquisa (q) ou de filtros específicos (filter). É possível definir o tipo de impressão (printType), o nível de detalhamento (projection), o índice do primeiro resultado a ser retornado (startIndex) e o número máximo de resultados a serem retornados (maxResults). Os dados retornados incluem informações sobre os volumes encontrados, como título, autor, editora, descrição, imagem da capa, entre outros.
+    -Volumes (/volumes): Este endpoint permite buscar volumes na biblioteca do Google Books, por meio de um termo de pesquisa (q) ou de filtros específicos (filter). É possível definir o tipo de impressão (printType), o nível de detalhamento (projection), o índice do primeiro resultado a ser retornado (startIndex) e o número máximo de resultados a serem retornados (maxResults). Os dados retornados incluem informações sobre os volumes encontrados, como título, autor, editora, descrição, imagem da capa, entre outros.
 
-Meus Livros (/mylibrary/bookshelves): Este endpoint permite gerenciar prateleiras de livros personalizadas do usuário. É possível criar, atualizar ou excluir prateleiras, bem como adicionar ou remover volumes de uma prateleira específica. Para realizar essas operações, é necessário passar a identificação da prateleira (shelf) e, em alguns casos, a identificação do volume (volumeId).
+    -Meus Livros (/mylibrary/bookshelves): Este endpoint permite gerenciar prateleiras de livros personalizadas do usuário. É possível criar, atualizar ou excluir prateleiras, bem como adicionar ou remover volumes de uma prateleira específica. Para realizar essas operações, é necessário passar a identificação da prateleira (shelf) e, em alguns casos, a identificação do volume (volumeId).
 
-Minhas Transações (/myconfig/subscription/events): Este endpoint permite receber notificações sobre eventos relacionados à conta do usuário, como alterações em prateleiras de livros, atualizações de comentários ou análises de usuários, entre outros. As notificações são enviadas em formato de fluxo (stream), utilizando o protocolo Server-Sent Events (SSE).
+    -Minhas Transações (/myconfig/subscription/events): Este endpoint permite receber notificações sobre eventos relacionados à conta do usuário, como alterações em prateleiras de livros, atualizações de comentários ou análises de usuários, entre outros. As notificações são enviadas em formato de fluxo (stream), utilizando o protocolo Server-Sent Events (SSE).
 
-Análises de usuários (/reviews): Este endpoint permite buscar comentários e análises de usuários sobre um volume específico. Para isso, é necessário passar a identificação do volume (volumeId) e, opcionalmente, a versão do conteúdo (contentVersion). Os dados retornados incluem informações sobre as análises, como identificação, avaliação, texto, fonte e data de atualização.
+    -Análises de usuários (/reviews): Este endpoint permite buscar comentários e análises de usuários sobre um volume específico. Para isso, é necessário passar a identificação do volume (volumeId) e, opcionalmente, a versão do conteúdo (contentVersion). Os dados retornados incluem informações sobre as análises, como identificação, avaliação, texto, fonte e data de atualização.
 
 Livros Gratuitos (/volumes/free): Este endpoint permite buscar volumes gratuitos na biblioteca do Google Books. É possível definir o tipo de impressão (printType), o nível de detalhamento (projection), o índice do primeiro resultado a ser retornado (startIndex) e o número máximo de resultados a serem retornados (maxResults). Os dados retornados incluem informações sobre os volumes encontrados, como título, autor, editora, descrição, imagem da capa, entre outros.
 
@@ -81,3 +81,69 @@ Livros Gratuitos:
 
 kind: Tipo de recurso (books#volumes)
 items: Lista de volumes gratuitos
+
+
+
+    VOLUME: LIST - https://www.googleapis.com/books/v1/volumes?q={parâmetros}
+      
+      PARÊMETRO OBRIGATÓRIO:
+        
+        -q (string): Consulta de pesquisa de texto completa;
+        
+        
+      PARÂMETROS OPCIONAIS:
+        
+        -download (string): Restringe os volumes de acordo com a disponibilidade de download
+           valor do tipo:
+              "epub" - todos os valores do tipo EPUB
+            
+        -filter (string): Filtra os resultados da pesquisa
+           valores do tipo:
+               "ebooks" - todos os ebooks do Google;
+               "free-books" - ebooks do Google com total visibilidade do texto;
+               "full" - o volume do texto inteiro fica visível para o público;
+               "paid-ebooks" - ebooks do Google com um preço (pago);
+               "partial" - os textos são disponíveis para o público ver.
+               
+               
+        -langRestrict (string): Restringe os resultados da busca para algum idiota especifico;
+        
+        -libraryRestrict (string): Restringe a pesquisa apenas à biblioteca do usuário
+            valores do tipo:
+                "my-library" - restringe à biblioteca do usuário;
+                "no-restrict" - não restringe à biblioteca do usuário.
+                
+        -maxResults (unsigned integer): Número máximo de resultados que podem ser retornados
+            valores: 
+                0 a 40;
+                
+        -orderBy (string): Ordena os resultados da pesquisa
+            valores:
+                "newest": publicado mais recentemente;
+                "relevance": relevância dos termos de pesquisa;
+                
+        -partner (string): Restringe e gera resultados de marca para o ID do parceiro
+        
+        -printType (string): Restringe a apenas livros ou revistas
+             valores:
+                  ""
+
+  
+  -libraryRestrict:	(string)	Restringir a pesquisa à biblioteca do usuário:
+        "my-library": restringe à biblioteca do usuário, qualquer estante.
+	      "no-restrict": não restringir com base na biblioteca do usuário.
+        
+  -orderBy: (string) Ordena os resultados da pesquisa:
+        "newest": publicado mais recentemente.
+        "relevance": relevância dos termos de pesquisa.
+        
+  -filter: (string) Filtra os resultados da pesquisa:
+       "full": o público pode ver o texto do volume inteiro.
+       "partial": o público vê partes do texto.
+
+
+
+
+
+https://developers.google.com/books/docs/v1/reference/volumes/list?hl=pt-br
+
