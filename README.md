@@ -1,4 +1,6 @@
-# EvelynHugoApp - Beatriz Chagas e Elis Torrres
+# EvelynHugoApp
+
+Beatriz Chagas e Elis Torrres
 
 Documentação da API Google Books
 
