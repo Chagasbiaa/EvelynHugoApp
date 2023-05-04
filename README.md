@@ -187,18 +187,18 @@ DESCRIÇÃO TELAS
 	A página inicial do app é exibida após o carregamento da tela splash. Na primeira tela do aplicativo já podemos
 	localizar o menu vertical a esquerdo, onde vamos encontrar algumas opções para navegação dentro do app.
 	
-	Tela de maridos - É possível se aprofundar em cada marido que a atriz teve durante a sua vida. Ao clicar na foto 
+	Tela de maridos (1) - É possível se aprofundar em cada marido que a atriz teve durante a sua vida. Ao clicar na foto 
 	de cada um, abrirá uma outra página com um resumo sobre o personagem, além de um botão que levará ao seu segredo. 
 	A tela de segredos, assim como a de personagens, segue um padrão para todos os seus personagens. Nela, pode-se 
 	conhecer o maior segredo do personagem escolhido.
 	
-	Telas Célia - A personagem Celia possui um diferencial se comparada aos outros personagens. Ela possui uma aba
+	Telas Célia (2) - A personagem Celia possui um diferencial se comparada aos outros personagens. Ela possui uma aba
 	especialmente sua, que leva para uma tela com diferentes opções, como: ver sua história com a Evelyn; os filmes
 	em que a atriz atuou; e o seu segredo. 
 	
-	Tela Evelyn - O aplicativo possui também uma tela destinada unicamente a protagonista do livro, Evelyn Hugo. 
+	Tela Evelyn (3) - O aplicativo possui também uma tela destinada unicamente a protagonista do livro, Evelyn Hugo. 
 	A página de Evelyn contará toda a trajetória de vida da atriz, desde todas as suas conquistas e lutas, até sua morte. 
 	
-	Tela de Pesquisa – Por fim, uma tela destinada as pesquisas, que exibirão dados tirados da API.
+	Tela de Pesquisa (4) – Por fim, uma tela destinada as pesquisas, que exibirão dados tirados da API.
 
 
