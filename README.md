@@ -162,3 +162,29 @@ Livros Gratuitos:
 
 	Resposta: Se for bem-sucedido, este método retornará um recurso Volume no corpo da resposta.
 
+
+DIAGRAMA DE CLASSES 
+
+![image](https://user-images.githubusercontent.com/101807222/236349398-880fc81a-b0b9-4761-9421-73cefef9e69b.png)
+
+
+DIAGRAMA DE BANCO DE DADOS
+
+![image](https://user-images.githubusercontent.com/101807222/236349435-b8d9653d-6e60-46bf-a1f2-6c3a19987af0.png)
+
+
+MAPEAMENTO DAS TELAS DO APP
+
+![mapeamento_final](https://user-images.githubusercontent.com/101807222/236349474-1a3c98c9-1112-4e96-969e-c07348f2d1ac.png)
+
+
+DESCRIÇÃO TELAS
+
+A aplicação é iniciada com uma tela de splash, que antes de sumir completamente na abertura do aplicativo, exibe uma rápida imagem de alerta de spoiler, já que o conteúdo do app pode oferecer spoilers para os leitores que ainda não finalizaram a leitura do livro.
+A página inicial do app é exibida após o carregamento da tela splash. Na primeira tela do aplicativo já podemos localizar o menu vertical a esquerdo, onde vamos encontrar algumas opções para navegação dentro do app.
+Tela de maridos - É possível se aprofundar em cada marido que a atriz teve durante a sua vida. Ao clicar na foto de cada um, abrirá uma outra página com um resumo sobre o personagem, além de um botão que levará ao seu segredo. A tela de segredos, assim como a de personagens, segue um padrão para todos os seus personagens. Nela, pode-se conhecer o maior segredo do personagem escolhido.
+Telas Célia - A personagem Celia possui um diferencial se comparada aos outros personagens. Ela possui uma aba especialmente sua, que leva para uma tela com diferentes opções, como: ver sua história com a Evelyn; os filmes em que a atriz atuou; e o seu segredo. 
+Tela Evelyn - O aplicativo possui também uma tela destinada unicamente a protagonista do livro, Evelyn Hugo. A página de Evelyn contará toda a trajetória de vida da atriz, desde todas as suas conquistas e lutas, até sua morte.  
+Tela de Pesquisa – Por fim, uma tela destinada as pesquisas, que exibirão dados tirados da API.
+
+
