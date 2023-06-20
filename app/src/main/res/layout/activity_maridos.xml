@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarStyle="outsideOverlay">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:backgroundTint="@color/black"
+        tools:context=".bombinhaactivity">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/syncopate"
+            android:text="@string/husbtitulo"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageView6"
+            android:layout_width="352dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:adjustViewBounds="false"
+            android:background="@drawable/erniediaz"
+            android:cropToPadding="false"
+            android:scaleType="centerInside"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/imageView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/imageView8"
+            android:layout_width="352dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:adjustViewBounds="false"
+            android:background="@drawable/donadler"
+            android:cropToPadding="false"
+            android:scaleType="centerInside"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/imageView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:ignore="MissingConstraints,NotSibling" />
+
+        <ImageButton
+            android:id="@+id/imageView9"
+            android:layout_width="600dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="24dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/imageView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8"
+            app:srcCompat="@drawable/mickriva"
+            tools:ignore="MissingConstraints,NotSibling" />
+
+        <ImageButton
+            android:id="@+id/imageView10"
+            android:layout_width="390dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9"
+            app:srcCompat="@drawable/rex"
+            tools:layout_editor_absoluteX="11dp" />
+
+        <ImageButton
+            android:id="@+id/imageView11"
+            android:layout_width="800dp"
+            android:layout_height="489dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="30dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:scaleType="centerInside"
+            android:visibility="visible"
+            android:background="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView10"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/harry" />
+
+        <ImageButton
+            android:id="@+id/imageView12"
+            android:layout_width="600dp"
+            android:layout_height="489dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="30dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView11"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/max" />
+
+        <ImageButton
+            android:id="@+id/imageView13"
+            android:layout_width="440dp"
+            android:layout_height="489dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="30dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:scaleType="centerInside"
+            android:visibility="visible"
+            android:background="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.517"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView12"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/robert" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
