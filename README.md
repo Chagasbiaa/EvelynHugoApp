@@ -1,4 +1,4 @@
-# EvelynHugoApp
+# EvelynHugoApp (Aplicativo no branch master)
 
 Beatriz Chagas e Elis Torrres
 
