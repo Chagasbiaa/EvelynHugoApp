@@ -2,6 +2,8 @@
 
 Beatriz Chagas e Elis Torrres
 
+Vídeo de exibição do app: https://drive.google.com/file/d/1qh3LX78ZM-1gqeF00-xz50OrYJgwh0NM/view?usp=sharing
+
 Documentação da API Google Books
 
 URL da documentação: https://developers.google.com/books/docs/v1/getting_started
