@@ -204,3 +204,11 @@ DESCRIÇÃO TELAS
 	Tela de Pesquisa (4) – Por fim, uma tela destinada as pesquisas, que exibirão dados tirados da API.
 
 
+ Diagrama para api própria 
+ 
+ ![image](https://github.com/Chagasbiaa/EvelynHugoApp/assets/101806629/fcb3d5ab-6623-4f61-85ba-53620ec5fdfb)
+
+
+ 
+
+
