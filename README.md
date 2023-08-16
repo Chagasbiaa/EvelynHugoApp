@@ -204,9 +204,30 @@ DESCRIÇÃO TELAS
 	Tela de Pesquisa (4) – Por fim, uma tela destinada as pesquisas, que exibirão dados tirados da API.
 
 
- Diagrama para api própria 
+DOCUMENTAÇÃO PARA API PRÓPRIA
  
- ![image](https://github.com/Chagasbiaa/EvelynHugoApp/assets/101806629/fcb3d5ab-6623-4f61-85ba-53620ec5fdfb)
+Diagrama de classes
+
+ ![image](https://github.com/Chagasbiaa/EvelynHugoApp/assets/101806629/e8ce38b7-197f-42ae-b882-7a6b57b4d587)
+
+
+
+Diagrama MER
+ 
+![image](https://github.com/Chagasbiaa/EvelynHugoApp/assets/101806629/8f58117b-3032-4b6d-95ac-8e902dd27a7f)
+
+
+Diagrama banco
+ 
+![image](https://github.com/Chagasbiaa/EvelynHugoApp/assets/101806629/c6ec5ff1-3ca2-4eaa-9493-14ddeec934c3)
+
+
+Funcionalidades
+	Disponibilizar dados que na primeira versão eram estáticos diretamente do banco
+
+Descrição API
+	A nossa API terá a função de substituir dados que anteriormente eram estáticos. Por exemplo: história, dados e informações dos personagens e da autora do livro.
+
 
 
  
